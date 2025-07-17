@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthode LIFT – Libérez votre potentiel professionnel</title>
+    <meta name="description"
+        content="La méthode LIFT en 4 étapes pour créer une activité alignée, rentable et épanouissante. Coaching stratégique pour entrepreneurs et indépendants.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #0d9488, #059669);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hover-grow {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-grow:hover {
+            transform: translateY(-5px);
+        }
+
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+
+        .faq-item[open] {
+            background-color: #f0fdf4;
+        }
+
+        .animate-marquee {
+            animation: marquee 15s linear infinite;
+            /* Adjust time as needed */
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+                /* Scrolls content to the left */
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Hero -->
+    <header class="bg-gradient-to-r from-teal-600 to-emerald-700 text-white py-24 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <span
+                class="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6 animate__animated animate__fadeIn">Nouvelle
+                formation disponible</span>
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 animate__animated animate__fadeInUp">
+                <span>Méthode LIFT</span>
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8 animate__animated animate__fadeIn animate__delay-1s">
+                Le système en 4 étapes pour <span class="font-semibold">libérer votre potentiel</span> et créer une
+                activité alignée avec vos aspirations
+            </p>
+            <div class="animate__animated animate__fadeIn animate__delay-1s">
+                <a href="#cta"
+                    class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 text-lg rounded-full shadow-lg hover-grow">
+                    <span class="flex items-center justify-center">
+                        <i data-lucide="rocket" class="w-5 h-5 mr-2"></i> Accéder à la formation offerte
+                    </span>
+                </a>
+                <p class="text-sm mt-4 opacity-80">+ 1 heure de coaching stratégique offerte</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Logos Marquee -->
+    <div class="bg-white py-6 border-y border-gray-100 overflow-hidden">
+        <div class="flex items-center justify-center animate-marquee whitespace-nowrap">
+            <span class="text-gray-500 mx-8">Ils nous font confiance :</span>
+            <span class="font-medium text-gray-700 mx-8">Entrepreneurs</span>
+            <span class="font-medium text-gray-700 mx-8">Indépendants</span>
+            <span class="font-medium text-gray-700 mx-8">Coach</span>
+            <span class="font-medium text-gray-700 mx-8">Consultants</span>
+            <span class="font-medium text-gray-700 mx-8">Créatifs</span>
+        </div>
+    </div>
+
+    <!-- Problèmes -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Vous reconnaissez-vous dans <span class="gradient-text">ces situations</span> ?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ces défis sont plus fréquents que vous ne le pensez. La bonne nouvelle ? Ils ont une solution.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover-grow border-l-4 border-red-400">
+                    <div class="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="compass" class="w-6 h-6 text-red-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-red-600 mb-3">Manque de direction</h3>
+                    <p class="text-gray-600 mb-4">Vous avez le potentiel, mais pas le plan ni le cadre pour avancer
+                        efficacement.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-start">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-red-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Beaucoup d'idées mais pas de priorité</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-red-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Difficulté à passer à l'action</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover-grow border-l-4 border-yellow-400">
+                    <div class="w-12 h-12 bg-yellow-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="zap" class="w-6 h-6 text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-yellow-600 mb-3">Trop d'outils, peu de résultats</h3>
+                    <p class="text-gray-600 mb-4">Vous testez plein de méthodes sans voir d'impact réel sur votre
+                        activité.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-start">
+                            <i data-lucide="chevron-right"
+                                class="w-4 h-4 text-yellow-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Formations qui s'accumulent</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="chevron-right"
+                                class="w-4 h-4 text-yellow-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Résultats en dessous des attentes</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover-grow border-l-4 border-indigo-400">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="users" class="w-6 h-6 text-indigo-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-3">Solitude et doute</h3>
+                    <p class="text-gray-600 mb-4">Pas de soutien ni de retour sur vos actions, le doute s'installe.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-start">
+                            <i data-lucide="chevron-right"
+                                class="w-4 h-4 text-indigo-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Manque de communauté</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="chevron-right"
+                                class="w-4 h-4 text-indigo-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Remise en question constante</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Méthode LIFT en 4 étapes -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block bg-teal-50 text-teal-600 px-4 py-2 rounded-full text-sm font-medium mb-4">Notre
+                    méthode</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Les <span class="gradient-text">4 piliers</span> de la transformation
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Un système éprouvé pour passer de l'idée à la réalisation concrète
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="bg-gradient-to-b from-teal-50 to-white p-6 rounded-xl border border-teal-100 shadow-sm hover-grow">
+                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-teal-600 font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-teal-700 mb-3">Libérez</h3>
+                    <p class="text-gray-600 mb-4">Débarrassez-vous des blocages mentaux et définissez une vision claire.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-teal-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Identifier vos freins</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-teal-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Clarifier vos aspirations</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-gradient-to-b from-emerald-50 to-white p-6 rounded-xl border border-emerald-100 shadow-sm hover-grow">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-emerald-600 font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-emerald-700 mb-3">Investissez</h3>
+                    <p class="text-gray-600 mb-4">Apprenez à investir en vous-même avec stratégie et confiance.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Prioriser vos investissements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Maximiser votre ROI personnel</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-gradient-to-b from-amber-50 to-white p-6 rounded-xl border border-amber-100 shadow-sm hover-grow">
+                    <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-amber-600 font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-amber-700 mb-3">Formez</h3>
+                    <p class="text-gray-600 mb-4">Accédez à des contenus à fort impact, faciles à appliquer.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-amber-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Apprentissage ciblé</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-amber-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Méthodes actionnables</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-gradient-to-b from-orange-50 to-white p-6 rounded-xl border border-orange-100 shadow-sm hover-grow">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-orange-600 font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-orange-700 mb-3">Transformez</h3>
+                    <p class="text-gray-600 mb-4">Mettez en place une transformation durable de votre vie pro.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-orange-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Plan d'action personnalisé</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-orange-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span>Résultats mesurables</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Résultats -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block bg-white text-teal-600 px-4 py-2 rounded-full text-sm font-medium mb-4 border border-teal-200">Résultats
+                    concrets</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Ce que nos membres <span class="gradient-text">accomplissent</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-xl shadow text-center">
+                    <div class="text-4xl font-bold text-teal-600 mb-2">3x</div>
+                    <p class="text-gray-700">Plus de clarté sur leur projet</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow text-center">
+                    <div class="text-4xl font-bold text-teal-600 mb-2">2.5x</div>
+                    <p class="text-gray-700">Plus de confiance en leur valeur</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow text-center">
+                    <div class="text-4xl font-bold text-teal-600 mb-2">80%</div>
+                    <p class="text-gray-700">Ont lancé leur activité en 3 mois</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-medium mb-4">Ils
+                    témoignent</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Nos membres <span class="gradient-text">racontent</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover-grow">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center mr-4">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <span class="ml-1 text-gray-700">5.0</span>
+                        </div>
+                        <span class="text-gray-500 text-sm">Il y a 2 mois</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"J'ai lancé mon activité de coach en 3 mois, sans me brûler. La
+                        clarté de la méthode est incroyable."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full mr-4"
+                            alt="Sarah">
+                        <div>
+                            <h4 class="font-medium">Sarah</h4>
+                            <p class="text-gray-500 text-sm">Coach en développement personnel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover-grow">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center mr-4">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <span class="ml-1 text-gray-700">4.9</span>
+                        </div>
+                        <span class="text-gray-500 text-sm">Il y a 1 mois</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"Je pensais que j'étais dispersé, en fait j'étais juste mal
+                        guidé. LIFT a tout changé."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full mr-4"
+                            alt="Hugo">
+                        <div>
+                            <h4 class="font-medium">Hugo</h4>
+                            <p class="text-gray-500 text-sm">Consultant indépendant</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover-grow">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center mr-4">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <span class="ml-1 text-gray-700">5.0</span>
+                        </div>
+                        <span class="text-gray-500 text-sm">Il y a 3 semaines</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"La meilleure décision pro de mon année. Un boost énorme pour
+                        ma reconversion."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-10 h-10 rounded-full mr-4"
+                            alt="Mélanie">
+                        <div>
+                            <h4 class="font-medium">Mélanie</h4>
+                            <p class="text-gray-500 text-sm">Designer freelance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Questions <span class="gradient-text">fréquentes</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Tout ce que vous devez savoir avant de commencer
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="faq-item bg-white p-6 rounded-lg border border-gray-200">
+                    <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg">
+                        <span>À qui s'adresse la méthode LIFT ?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+                    </summary>
+                    <div class="mt-4 text-gray-600">
+                        <p class="mb-3">La méthode LIFT est conçue pour :</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Les indépendants et entrepreneurs qui veulent structurer leur activité</li>
+                            <li>Les salariés en reconversion professionnelle</li>
+                            <li>Les porteurs de projet qui cherchent une méthode claire</li>
+                            <li>Toute personne souhaitant aligner sa vie professionnelle avec ses aspirations</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item bg-white p-6 rounded-lg border border-gray-200">
+                    <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg">
+                        <span>Combien de temps dure la formation ?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+                    </summary>
+                    <div class="mt-4 text-gray-600">
+                        <p>Le parcours principal est structuré sur 6 semaines avec :</p>
+                        <ul class="list-disc pl-5 space-y-2 mt-3">
+                            <li>Modules vidéo à votre rythme (environ 2h/semaine)</li>
+                            <li>Rendez-vous live hebdomadaires de coaching (1h/semaine)</li>
+                            <li>Exercices pratiques et plan d'action personnalisé</li>
+                            <li>Accès à vie au contenu après la formation</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item bg-white p-6 rounded-lg border border-gray-200">
+                    <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg">
+                        <span>Puis-je poser mes questions ou être accompagné ?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+                    </summary>
+                    <div class="mt-4 text-gray-600">
+                        <p class="mb-3">Oui, plusieurs options d'accompagnement sont disponibles :</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Groupe privé pour échanger avec la communauté</li>
+                            <li>Coaching de groupe en live chaque semaine</li>
+                            <li>Option d'accompagnement personnalisé 1:1</li>
+                            <li>Support par email pour les questions techniques</li>
+                        </ul>
+                        <p class="mt-3">Votre premier appel stratégique est offert avec la formation.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item bg-white p-6 rounded-lg border border-gray-200">
+                    <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg">
+                        <span>Quelle est la différence avec d'autres formations ?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+                    </summary>
+                    <div class="mt-4 text-gray-600">
+                        <p>La méthode LIFT se distingue par :</p>
+                        <ul class="list-disc pl-5 space-y-2 mt-3">
+                            <li>Une approche holistique (mental, stratégie, action)</li>
+                            <li>Un focus sur l'alignement avec vos valeurs</li>
+                            <li>Des outils concrets et immédiatement applicables</li>
+                            <li>Un accompagnement humain et personnalisé</li>
+                            <li>Une communauté bienveillante et engagée</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appel à l'action -->
+    <section id="cta" class="py-24 px-4 bg-gradient-to-br from-teal-600 to-emerald-700 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Prêt à <span class="text-orange-300">transformer</span> votre vie professionnelle ?
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Rejoignez la méthode LIFT aujourd'hui et recevez immédiatement :
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-lucide="video" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Module 1 offert</h3>
+                    <p class="text-sm opacity-90">Valeur : 97€</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-lucide="phone-call" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Appel stratégique</h3>
+                    <p class="text-sm opacity-90">Valeur : 150€</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-lucide="file-text" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Outils pratiques</h3>
+                    <p class="text-sm opacity-90">Valeur : 47€</p>
+                </div>
+            </div>
+
+            <a href="#"
+                class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-10 py-4 text-lg rounded-full shadow-lg hover-grow">
+                <span class="flex items-center justify-center">
+                    <i data-lucide="gift" class="w-5 h-5 mr-2"></i> Recevoir mon accès gratuit
+                </span>
+            </a>
+            <p class="text-sm mt-4 opacity-80">Sans engagement • Accès immédiat</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Méthode LIFT</h3>
+                    <p class="text-gray-400 mb-4">
+                        Le système en 4 étapes pour libérer votre potentiel professionnel et créer une activité alignée.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">La méthode</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Témoignages</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Légal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mentions légales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">CGV</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+                            <span>contact@methodelift.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                © 2025 Méthode LIFT. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Animation FAQ
+        document.querySelectorAll('details').forEach((item) => {
+            item.addEventListener('toggle', (event) => {
+                if (item.open) {
+                    const icon = item.querySelector('i');
+                    icon.classList.add('rotate-180');
+                } else {
+                    const icon = item.querySelector('i');
+                    icon.classList.remove('rotate-180');
+                }
+            });
+        });
+
+        // Animation du défilement des logos
+        const marquee = document.querySelector('.animate-marquee');
+        if (marquee) {
+            marquee.innerHTML += marquee.innerHTML; // Duplique le contenu pour un défilement continu
+            marquee.innerHTML += marquee.innerHTML; // Duplique le contenu pour un défilement continu
+        }
+    </script>
+</body>
+
+</html>

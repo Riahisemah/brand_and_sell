@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowStack - Plateforme Marketing Intelligente</title>
+    <meta name="description"
+        content="La solution intégrée qui unifie vos outils marketing, automatise vos processus et booste vos conversions">
+    <meta name="keywords"
+        content="automation marketing, CRM, tunnels de vente, entrepreneurs, IA marketing, outils intégrés">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FlowStack - Marketing Simplifié par l'IA">
+    <meta property="og:description" content="Tous vos outils marketing dans une seule plateforme intelligente">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flowstack.com">
+    <meta property="og:image" content="https://flowstack.com/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FlowStack - Marketing Simplifié">
+    <meta name="twitter:description" content="Centralisez et automatisez votre marketing digital">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "FlowStack",
+      "url": "https://flowstack.com",
+      "description": "Plateforme marketing tout-en-un avec IA intégrée",
+      "sameAs": [
+        "https://facebook.com/flowstack",
+        "https://linkedin.com/company/flowstack"
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        }
+
+        .faq-content {
+            transition: all 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .faq-content.open {
+            max-height: 500px;
+            /* ajustable selon le contenu */
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-white py-16 px-4 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="inline-block bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">✨
+                    Nouvelle génération de marketing</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    <span class="gradient-text">FlowStack</span> : Votre Marketing
+                    <span class="gradient-text">Automatisé</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">La plateforme qui unifie vos outils, automatise vos processus et
+                    multiplie vos résultats sans effort.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#cta"
+                        class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 py-3 rounded-lg shadow-md transition-all duration-300">
+                        Essai Gratuit 14 Jours
+                    </a>
+                    <a href="#demo"
+                        class="inline-block border border-gray-300 hover:border-gray-400 text-gray-700 font-medium px-6 py-3 rounded-lg transition-all duration-300">
+                        <span class="flex items-center justify-center">
+                            <i data-lucide="play-circle" class="w-5 h-5 mr-2"></i> Voir la démo
+                        </span>
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center">
+                    <div class="flex -space-x-2">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                    </div>
+                    <div class="ml-4">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <span class="ml-1 text-gray-700">4.9/5 (487 avis)</span>
+                        </div>
+                        <p class="text-sm text-gray-500">Rejoint par 2000+ entrepreneurs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:block relative">
+                <div
+                    class="absolute -top-6 -right-6 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70">
+                </div>
+                <div
+                    class="absolute -bottom-8 -left-8 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70">
+                </div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                    alt="Dashboard FlowStack"
+                    class="relative rounded-xl shadow-2xl border border-gray-100 transform hover:scale-[1.02] transition duration-300">
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Logos Marquee -->
+    <section class="py-8 bg-gray-50 border-y border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 overflow-hidden">
+            <p class="text-center text-gray-500 text-sm mb-6">Ils nous font confiance :</p>
+            <div class="flex items-center justify-center animate-marquee whitespace-nowrap">
+                <img src="https://logo.clearbit.com/forbes.com" alt="Forbes" class="h-8 mx-8">
+                <img src="https://logo.clearbit.com/techcrunch.com" alt="TechCrunch" class="h-6 mx-8">
+                <img src="https://logo.clearbit.com/entrepreneur.com" alt="Entrepreneur" class="h-6 mx-8">
+                <img src="https://logo.clearbit.com/inc.com" alt="Inc" class="h-6 mx-8">
+                <img src="https://logo.clearbit.com/fastcompany.com" alt="Fast Company" class="h-6 mx-8">
+                <img src="https://logo.clearbit.com/entrepreneur.com" alt="Entrepreneur" class="h-6 mx-8">
+                <img src="https://logo.clearbit.com/inc.com" alt="Inc" class="h-6 mx-8">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section Problèmes -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <span class="inline-block bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">Le défi
+                des entrepreneurs</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Vous passez plus de temps à gérer vos outils qu'à développer votre business ?
+            </h2>
+            <p class="text-xl text-gray-600">
+                La complexité du marketing digital vous empêche de vous concentrer sur l'essentiel.
+            </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="clock" class="w-6 h-6 text-red-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Temps perdu</h3>
+                <p class="text-gray-600">Entre les connexions, synchronisations et bugs, vous perdez 3h/jour en moyenne.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="dollar-sign" class="w-6 h-6 text-purple-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Coûts cachés</h3>
+                <p class="text-gray-600">Les abonnements multiples et intégrations payantes font exploser votre budget.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="activity" class="w-6 h-6 text-blue-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Données dispersées</h3>
+                <p class="text-gray-600">Vos données clients sont éparpillées entre 10 plateformes différentes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Solution -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1">
+                <span
+                    class="inline-block bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">Notre
+                    solution</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Une plateforme unifiée pour tout votre marketing
+                </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    FlowStack rassemble tous vos outils essentiels dans une interface cohérente, avec l'IA pour
+                    automatiser les tâches répétitives.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Économisez jusqu'à 70%</h3>
+                            <p class="text-gray-600">Un seul abonnement remplace tous vos outils actuels.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Gagnez 3h par jour</h3>
+                            <p class="text-gray-600">Automatisation des tâches chronophages.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Décisions éclairées</h3>
+                            <p class="text-gray-600">Analyses unifiées et recommandations par IA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 relative">
+                <div
+                    class="absolute -top-6 -right-6 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70">
+                </div>
+                <div
+                    class="absolute -bottom-8 -left-8 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70">
+                </div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                    alt="Dashboard FlowStack" class="relative rounded-xl shadow-lg border border-gray-100">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Fonctionnalités -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <span
+                class="inline-block bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">Fonctionnalités</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Tout ce dont vous avez besoin, rien de superflu
+            </h2>
+            <p class="text-xl text-gray-600">
+                Une plateforme conçue pour les entrepreneurs qui veulent des résultats, pas des fonctionnalités
+                inutiles.
+            </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="zap" class="w-6 h-6 text-blue-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Automation Marketing</h3>
+                <p class="text-gray-600">Créez des workflows intelligents qui fonctionnent 24/7 pour engager vos
+                    clients.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="layout-template" class="w-6 h-6 text-purple-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Tunnels de Vente</h3>
+                <p class="text-gray-600">Des templates optimisés pour convertir plus avec moins d'effort.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="users" class="w-6 h-6 text-green-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">CRM Intelligent</h3>
+                <p class="text-gray-600">Gérez vos contacts et segments avec des insights en temps réel.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-yellow-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="message-square" class="w-6 h-6 text-yellow-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Réseaux Sociaux</h3>
+                <p class="text-gray-600">Planifiez, publiez et analysez tous vos canaux en un seul endroit.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="bar-chart-2" class="w-6 h-6 text-red-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Analyses Avancées</h3>
+                <p class="text-gray-600">Tableaux de bord personnalisés pour suivre ce qui compte vraiment.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="cpu" class="w-6 h-6 text-indigo-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">IA Intégrée</h3>
+                <p class="text-gray-600">Notre IA optimise automatiquement vos campagnes pour de meilleurs résultats.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Demo Video -->
+    <section id="demo" class="py-20 px-4 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span
+                    class="inline-block bg-blue-900 bg-opacity-20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-4">Démonstration</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Découvrez FlowStack en action
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Voyez comment notre plateforme peut transformer votre marketing digital en moins de 3 minutes.
+                </p>
+            </div>
+
+            <div class="relative aspect-video max-w-4xl mx-auto bg-gray-800 rounded-xl overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button
+                        class="w-20 h-20 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                        <i data-lucide="play" class="w-8 h-8 text-white"></i>
+                    </button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                    alt="Video thumbnail" class="w-full h-full object-cover opacity-70">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <span
+                class="inline-block bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">Témoignages</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Ce que nos clients disent
+            </h2>
+            <p class="text-xl text-gray-600">
+                Des entrepreneurs comme vous qui ont transformé leur business.
+            </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                <div class="flex items-center mb-4">
+                    <div class="flex items-center mr-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <span class="ml-1 text-gray-700">5.0</span>
+                    </div>
+                    <span class="text-gray-500 text-sm">Il y a 2 semaines</span>
+                </div>
+                <p class="text-gray-700 mb-6 italic">
+                    "FlowStack a réduit mes coûts marketing de 60% tout en augmentant mes conversions. La plateforme est
+                    si intuitive que j'ai pu l'utiliser efficacement dès le premier jour."
+                </p>
+                <div class="flex items-center">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full mr-4"
+                        alt="Marie D.">
+                    <div>
+                        <h4 class="font-medium">Marie D.</h4>
+                        <p class="text-gray-500 text-sm">Coach Business</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                <div class="flex items-center mb-4">
+                    <div class="flex items-center mr-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <span class="ml-1 text-gray-700">4.8</span>
+                    </div>
+                    <span class="text-gray-500 text-sm">Il y a 1 mois</span>
+                </div>
+                <p class="text-gray-700 mb-6 italic">
+                    "L'IA de FlowStack a identifié des opportunités que j'avais complètement manquées. En 3 mois, mon
+                    chiffre d'affaires a augmenté de 40% sans effort supplémentaire."
+                </p>
+                <div class="flex items-center">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full mr-4"
+                        alt="Thomas L.">
+                    <div>
+                        <h4 class="font-medium">Thomas L.</h4>
+                        <p class="text-gray-500 text-sm">E-commerce</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                <div class="flex items-center mb-4">
+                    <div class="flex items-center mr-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <span class="ml-1 text-gray-700">5.0</span>
+                    </div>
+                    <span class="text-gray-500 text-sm">Il y a 2 mois</span>
+                </div>
+                <p class="text-gray-700 mb-6 italic">
+                    "Enfin une solution qui comprend les besoins des entrepreneurs. Plus besoin d'être un expert en tech
+                    pour avoir des résultats professionnels."
+                </p>
+                <div class="flex items-center">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-10 h-10 rounded-full mr-4"
+                        alt="Sophie M.">
+                    <div>
+                        <h4 class="font-medium">Sophie M.</h4>
+                        <p class="text-gray-500 text-sm">Consultante</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Tarifs -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <span
+                class="inline-block bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">Tarification</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Simple, transparent, adapté à vous
+            </h2>
+            <p class="text-xl text-gray-600">
+                Un seul prix pour toutes les fonctionnalités. Payez seulement pour ce dont vous avez besoin.
+            </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <h3 class="text-xl font-semibold mb-4">Starter</h3>
+                <p class="text-gray-600 mb-6">Parfait pour commencer</p>
+                <div class="mb-6">
+                    <span class="text-4xl font-bold">€49</span>
+                    <span class="text-gray-500">/mois</span>
+                </div>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>1,000 contacts</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>3 tunnels de vente</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>5 comptes sociaux</span>
+                    </li>
+                    <li class="flex items-center text-gray-400">
+                        <i data-lucide="x" class="w-5 h-5 text-gray-300 mr-2"></i>
+                        <span>IA avancée</span>
+                    </li>
+                </ul>
+                <button
+                    class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-3 px-4 rounded-lg transition">
+                    Commencer
+                </button>
+            </div>
+
+            <div
+                class="bg-white p-8 rounded-xl border-2 border-blue-500 shadow-lg transform hover:scale-[1.02] transition">
+                <div
+                    class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                    Populaire
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Pro</h3>
+                <p class="text-gray-600 mb-6">Pour les entrepreneurs sérieux</p>
+                <div class="mb-6">
+                    <span class="text-4xl font-bold">€99</span>
+                    <span class="text-gray-500">/mois</span>
+                </div>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>10,000 contacts</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>Tunnels illimités</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>Comptes sociaux illimités</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>IA avancée</span>
+                    </li>
+                </ul>
+                <button
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition">
+                    Essai Gratuit
+                </button>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <h3 class="text-xl font-semibold mb-4">Enterprise</h3>
+                <p class="text-gray-600 mb-6">Solution sur mesure</p>
+                <div class="mb-6">
+                    <span class="text-4xl font-bold">€299</span>
+                    <span class="text-gray-500">/mois</span>
+                </div>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>Contacts illimités</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>Tunnels illimités</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>Comptes sociaux illimités</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>
+                        <span>IA premium + support dédié</span>
+                    </li>
+                </ul>
+                <button
+                    class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-3 px-4 rounded-lg transition">
+                    Nous contacter
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section id="faq" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Questions fréquentes
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Tout ce que vous devez savoir avant de commencer.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium">Comment migrer mes données depuis mes outils actuels ?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pt-0 hidden">
+                        <p class="text-gray-600">
+                            Notre équipe prend en charge la migration complète de vos données. Il vous suffit de nous
+                            donner accès à vos outils actuels et nous nous occupons de tout en moins de 48h, sans
+                            interruption de service.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium">Puis-je essayer FlowStack gratuitement ?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pt-0 hidden">
+                        <p class="text-gray-600">
+                            Oui ! Nous offrons un essai gratuit de 14 jours sans carte de crédit requise. Vous avez
+                            accès à toutes les fonctionnalités pendant cette période pour tester la plateforme.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium">Quelle est la différence entre les plans ?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pt-0 hidden">
+                        <p class="text-gray-600">
+                            Les plans diffèrent principalement par le nombre de contacts, de tunnels et l'accès aux
+                            fonctionnalités avancées d'IA. Le plan Starter est idéal pour commencer, tandis que le plan
+                            Pro convient à la plupart des entrepreneurs sérieux. Le plan Enterprise est conçu pour les
+                            entreprises avec des besoins spécifiques.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium">FlowStack remplace-t-il vraiment tous mes outils ?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pt-0 hidden">
+                        <p class="text-gray-600">
+                            FlowStack intègre nativement toutes les fonctionnalités essentielles : CRM, automation,
+                            tunnels de vente, gestion des réseaux sociaux, email marketing et analyses. La plupart de
+                            nos clients remplacent 5 à 10 outils par FlowStack. Certaines intégrations spécialisées
+                            peuvent rester nécessaires selon vos besoins spécifiques.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium">Y a-t-il des frais cachés ?</span>
+                        <i data-lucide="chevron-down"
+                            class="w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pt-0 hidden">
+                        <p class="text-gray-600">
+                            Absolument pas. Notre tarification est transparente et inclut toutes les fonctionnalités
+                            annoncées. Le seul supplément possible concerne l'envoi d'emails au-delà de votre quota
+                            mensuel inclus, au prix de €0.01 par email supplémentaire.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="cta" class="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Prêt à simplifier votre marketing digital ?
+            </h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                Rejoignez les milliers d'entrepreneurs qui ont déjà économisé temps et argent avec FlowStack.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button
+                    class="bg-white hover:bg-gray-100 text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+                    Commencer l'essai gratuit
+                </button>
+                <button
+                    class="border-2 border-white hover:bg-white hover:bg-opacity-10 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300">
+                    Voir la démo
+                </button>
+            </div>
+            <p class="mt-6 text-sm opacity-80">
+                Essai de 14 jours • Sans carte de crédit • Annulation à tout moment
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">FlowStack</h3>
+                    <p class="mb-4">
+                        La plateforme marketing tout-en-un pour entrepreneurs et freelances.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Produit</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Fonctionnalités</a></li>
+                        <li><a href="#" class="hover:text-white transition">Tarifs</a></li>
+                        <li><a href="#" class="hover:text-white transition">Intégrations</a></li>
+                        <li><a href="#" class="hover:text-white transition">Roadmap</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Ressources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition">Guides</a></li>
+                        <li><a href="#" class="hover:text-white transition">Support</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Entreprise</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">À propos</a></li>
+                        <li><a href="#" class="hover:text-white transition">Carrières</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Presse</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 FlowStack. Tous droits réservés.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition">Confidentialité</a>
+                    <a href="#" class="hover:text-white transition">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    
+        document.querySelectorAll('#faq button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+    
+                content.classList.toggle('hidden');
+                content.classList.toggle('faq-content');
+                content.classList.toggle('open');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+{
+  "name": "CRM: google contact to hubspot CRM",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "8d98d360-4a94-4f27-914a-9542cbc0442b",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": true,
+        "fields": [
+          "*"
+        ],
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleContacts",
+      "typeVersion": 1,
+      "position": [
+        220,
+        0
+      ],
+      "id": "33b0f625-54ff-4aaa-bc00-772cab21e5ac",
+      "name": "Google Contacts",
+      "credentials": {
+        "googleContactsOAuth2Api": {
+          "id": "Rt4ZjaeWCIOmNUPo",
+          "name": "Google Contacts account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "additionalFields": {},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 2.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "378e3392-42d5-44fb-a81c-1c0f6b1d7f21",
+      "name": "HubSpot",
+      "credentials": {
+        "hubspotApi": {
+          "id": "rFOhxIpQpoIPJLxC",
+          "name": "HubSpot account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "get"
+      },
+      "type": "n8n-nodes-base.wooCommerce",
+      "typeVersion": 1,
+      "position": [
+        320,
+        -180
+      ],
+      "id": "106b9996-ffde-4fa8-8b5d-b653a8840bab",
+      "name": "WooCommerce"
+    },
+    {
+      "parameters": {
+        "additionalFields": {},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 2.1,
+      "position": [
+        540,
+        -180
+      ],
+      "id": "fb1eae27-84c8-4c35-afae-291ca8bd83fa",
+      "name": "HubSpot1",
+      "credentials": {
+        "hubspotApi": {
+          "id": "rFOhxIpQpoIPJLxC",
+          "name": "HubSpot account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Contacts",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "WooCommerce",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Contacts": {
+      "main": [
+        [
+          {
+            "node": "HubSpot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WooCommerce": {
+      "main": [
+        [
+          {
+            "node": "HubSpot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "d46a531c-2bf5-4545-8e7f-6e081092752e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8302036273279e45ff08adf3b4e9dea02de4a914d800c9bdfa576f5a31cbd762"
+  },
+  "id": "GmBTD3tstO0U1Ejf",
+  "tags": []
+}

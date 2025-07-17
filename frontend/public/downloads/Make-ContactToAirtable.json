@@ -1,0 +1,499 @@
+{
+    "name": "Airtable CRM",
+    "flow": [
+        {
+            "id": 1,
+            "module": "google-contacts:watchContacts",
+            "version": 4,
+            "parameters": {
+                "limit": 2,
+                "__IMTCONN__": 5358018
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection (anasgara7@gmail.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "airtable:ActionCreateRecord",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 7736877
+            },
+            "mapper": {
+                "base": "appkeNA2O5QjLWKgu",
+                "table": "tbltjJaZQbeG4NZqG",
+                "record": {
+                    "fldR2d3WjflPCJy9N": "{{1.givenName}}"
+                },
+                "typecast": false,
+                "useColumnId": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "base": {
+                            "label": "CRM for gdp"
+                        },
+                        "table": {
+                            "label": "Clients",
+                            "nested": [
+                                {
+                                    "name": "record",
+                                    "spec": [
+                                        {
+                                            "name": "fldR2d3WjflPCJy9N",
+                                            "type": "text",
+                                            "label": "Client Name"
+                                        },
+                                        {
+                                            "name": "fldi4Yc5GIkBlrmwH",
+                                            "spec": {
+                                                "label": "Record ID"
+                                            },
+                                            "type": "array",
+                                            "label": "Contact Information"
+                                        },
+                                        {
+                                            "mode": "edit",
+                                            "name": "fldHYPqd7ipG6OdQg",
+                                            "type": "select",
+                                            "label": "Relationship Status",
+                                            "dynamic": true,
+                                            "options": [
+                                                {
+                                                    "label": "Prospective",
+                                                    "value": "Prospective"
+                                                },
+                                                {
+                                                    "label": "Current",
+                                                    "value": "Current"
+                                                },
+                                                {
+                                                    "label": "Former",
+                                                    "value": "Former"
+                                                }
+                                            ],
+                                            "validate": false
+                                        },
+                                        {
+                                            "mode": "edit",
+                                            "name": "fldcCOAiIwpTlfA0K",
+                                            "type": "select",
+                                            "label": "Company Size",
+                                            "dynamic": true,
+                                            "options": [
+                                                {
+                                                    "label": "Small",
+                                                    "value": "Small"
+                                                },
+                                                {
+                                                    "label": "Medium",
+                                                    "value": "Medium"
+                                                },
+                                                {
+                                                    "label": "Large",
+                                                    "value": "Large"
+                                                }
+                                            ],
+                                            "validate": false
+                                        },
+                                        {
+                                            "name": "fldTvVWpfrY7CIKw8",
+                                            "type": "text",
+                                            "label": "Industry"
+                                        },
+                                        {
+                                            "name": "fld6z3VXEWjEFCeFT",
+                                            "type": "number",
+                                            "label": "Annual Revenue"
+                                        },
+                                        {
+                                            "name": "fldKR8hCvBBWoAhwt",
+                                            "time": false,
+                                            "type": "date",
+                                            "label": "Date of First Contact"
+                                        },
+                                        {
+                                            "name": "fldTnZaDVd47j6lxD",
+                                            "spec": [
+                                                {
+                                                    "help": "Airtable will download the file at the given url and keep its own copy of it.",
+                                                    "name": "url",
+                                                    "type": "text",
+                                                    "label": "File URL"
+                                                },
+                                                {
+                                                    "help": "If empty, Airtable will generate the name automatically.",
+                                                    "name": "filename",
+                                                    "type": "filename",
+                                                    "label": "File name"
+                                                }
+                                            ],
+                                            "type": "array",
+                                            "label": "Profile Photo",
+                                            "editable": true
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Record"
+                                }
+                            ]
+                        },
+                        "record": {
+                            "nested": {
+                                "fldHYPqd7ipG6OdQg": {
+                                    "mode": "edit"
+                                },
+                                "fldTnZaDVd47j6lxD": {
+                                    "mode": "edit"
+                                },
+                                "fldcCOAiIwpTlfA0K": {
+                                    "mode": "edit"
+                                },
+                                "fldi4Yc5GIkBlrmwH": {
+                                    "mode": "edit"
+                                }
+                            }
+                        },
+                        "typecast": {
+                            "mode": "chose"
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable3"
+                            },
+                            "label": "My Airtable OAuth connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "typecast",
+                        "type": "boolean",
+                        "label": "Smart links",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "record",
+                        "spec": [
+                            {
+                                "name": "fldR2d3WjflPCJy9N",
+                                "type": "text",
+                                "label": "Client Name"
+                            },
+                            {
+                                "name": "fldi4Yc5GIkBlrmwH",
+                                "spec": {
+                                    "name": "value",
+                                    "label": "Record ID"
+                                },
+                                "type": "array",
+                                "label": "Contact Information"
+                            },
+                            {
+                                "mode": "edit",
+                                "name": "fldHYPqd7ipG6OdQg",
+                                "type": "select",
+                                "label": "Relationship Status"
+                            },
+                            {
+                                "mode": "edit",
+                                "name": "fldcCOAiIwpTlfA0K",
+                                "type": "select",
+                                "label": "Company Size"
+                            },
+                            {
+                                "name": "fldTvVWpfrY7CIKw8",
+                                "type": "text",
+                                "label": "Industry"
+                            },
+                            {
+                                "name": "fld6z3VXEWjEFCeFT",
+                                "type": "number",
+                                "label": "Annual Revenue"
+                            },
+                            {
+                                "name": "fldKR8hCvBBWoAhwt",
+                                "time": false,
+                                "type": "date",
+                                "label": "Date of First Contact"
+                            },
+                            {
+                                "name": "fldTnZaDVd47j6lxD",
+                                "spec": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "File URL"
+                                    },
+                                    {
+                                        "name": "filename",
+                                        "type": "filename",
+                                        "label": "File name"
+                                    }
+                                ],
+                                "type": "array",
+                                "label": "Profile Photo"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Record"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "Client Name",
+                        "type": "text",
+                        "label": "Client Name"
+                    },
+                    {
+                        "name": "Contact Information",
+                        "spec": {
+                            "label": "Record ID"
+                        },
+                        "type": "array",
+                        "label": "Contact Information"
+                    },
+                    {
+                        "name": "Relationship Status",
+                        "type": "text",
+                        "label": "Relationship Status"
+                    },
+                    {
+                        "name": "Company Size",
+                        "type": "text",
+                        "label": "Company Size"
+                    },
+                    {
+                        "name": "Industry",
+                        "type": "text",
+                        "label": "Industry"
+                    },
+                    {
+                        "name": "Annual Revenue",
+                        "type": "number",
+                        "label": "Annual Revenue"
+                    },
+                    {
+                        "name": "Date of First Contact",
+                        "time": false,
+                        "type": "date",
+                        "label": "Date of First Contact"
+                    },
+                    {
+                        "name": "Profile Photo",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "width",
+                                "type": "uinteger",
+                                "label": "Width"
+                            },
+                            {
+                                "name": "height",
+                                "type": "uinteger",
+                                "label": "Height"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "filename",
+                                "label": "File name"
+                            },
+                            {
+                                "name": "size",
+                                "type": "uinteger",
+                                "label": "Size"
+                            },
+                            {
+                                "name": "type",
+                                "type": "text",
+                                "label": "MIME type"
+                            },
+                            {
+                                "name": "thumbnails",
+                                "spec": [
+                                    {
+                                        "name": "small",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Small"
+                                    },
+                                    {
+                                        "name": "large",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Large"
+                                    },
+                                    {
+                                        "name": "full",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Full"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Thumbnails"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Profile Photo"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

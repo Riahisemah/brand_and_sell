@@ -1,0 +1,169 @@
+{
+  "name": "CRM: google contact to Brevo",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "cff3e517-f82c-41ae-8f21-3d966127c5a0",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": true,
+        "fields": [
+          "*"
+        ],
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleContacts",
+      "typeVersion": 1,
+      "position": [
+        220,
+        0
+      ],
+      "id": "3814ec6e-9608-4429-9a51-db742499fcb2",
+      "name": "Google Contacts",
+      "credentials": {
+        "googleContactsOAuth2Api": {
+          "id": "Rt4ZjaeWCIOmNUPo",
+          "name": "Google Contacts account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contact",
+        "email": "=a{{ $json.emailAddresses.undefined[0] }}",
+        "createContactAttributes": {
+          "attributesValues": [
+            {
+              "fieldName": "NOM",
+              "fieldValue": "={{ $json.names.displayName }}"
+            },
+            {
+              "fieldName": "CONTACT_TIMEZONE",
+              "fieldValue": "={{ $json.birthdays }}"
+            },
+            {
+              "fieldName": "SMS",
+              "fieldValue": "={{ $json.phoneNumbers.undefined[0].replace(/\\s+/g, '') }}"
+            }
+          ]
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.sendInBlue",
+      "typeVersion": 1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "190e8e00-7e70-495d-8fbb-f1349c8c7f91",
+      "name": "Brevo",
+      "credentials": {
+        "sendInBlueApi": {
+          "id": "Cz9QJPv7OCZ5oTfG",
+          "name": "Brevo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "get"
+      },
+      "type": "n8n-nodes-base.wooCommerce",
+      "typeVersion": 1,
+      "position": [
+        240,
+        -180
+      ],
+      "id": "6d9e5184-835f-4eb4-bdbd-c2035a4f9628",
+      "name": "WooCommerce"
+    },
+    {
+      "parameters": {
+        "resource": "contact",
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.sendInBlue",
+      "typeVersion": 1,
+      "position": [
+        460,
+        -180
+      ],
+      "id": "29c440d1-e5d3-4640-a87d-864e34885e5b",
+      "name": "Brevo1",
+      "credentials": {
+        "sendInBlueApi": {
+          "id": "Cz9QJPv7OCZ5oTfG",
+          "name": "Brevo account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Contacts",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "WooCommerce",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Contacts": {
+      "main": [
+        [
+          {
+            "node": "Brevo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WooCommerce": {
+      "main": [
+        [
+          {
+            "node": "Brevo1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "d08e3f97-da4b-4832-b23b-b399832ab2a4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8302036273279e45ff08adf3b4e9dea02de4a914d800c9bdfa576f5a31cbd762"
+  },
+  "id": "phO6HVdoO8jABwuj",
+  "tags": []
+}

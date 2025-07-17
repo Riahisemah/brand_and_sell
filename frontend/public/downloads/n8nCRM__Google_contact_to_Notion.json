@@ -1,0 +1,141 @@
+{
+  "name": "CRM: Google contact to Notion",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "9b9e0282-7cb9-49c4-bcf7-71acab5115b8",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.googleContacts",
+      "typeVersion": 1,
+      "position": [
+        240,
+        180
+      ],
+      "id": "a09389dc-3473-4d9d-9c01-f7621eb4c55f",
+      "name": "Google Contacts",
+      "credentials": {
+        "googleContactsOAuth2Api": {
+          "id": "Rt4ZjaeWCIOmNUPo",
+          "name": "Google Contacts account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        520,
+        120
+      ],
+      "id": "58a681cf-0e5f-468a-94d0-9d29b500409c",
+      "name": "Notion"
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {}
+      },
+      "type": "n8n-nodes-base.wooCommerce",
+      "typeVersion": 1,
+      "position": [
+        200,
+        -140
+      ],
+      "id": "35be0139-12a8-4709-8569-8c18388375e4",
+      "name": "WooCommerce"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        540,
+        -160
+      ],
+      "id": "9906d1db-dd0e-4b20-b938-3619feddd1b5",
+      "name": "Notion1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "WooCommerce",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Contacts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Contacts": {
+      "main": [
+        [
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WooCommerce": {
+      "main": [
+        [
+          {
+            "node": "Notion1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e3fed69d-31a8-43e4-a61e-e2bd9268362a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8302036273279e45ff08adf3b4e9dea02de4a914d800c9bdfa576f5a31cbd762"
+  },
+  "id": "YMSRbRYgIjXhHK6z",
+  "tags": []
+}

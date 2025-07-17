@@ -1,0 +1,254 @@
+{
+    "name": "Importation de contact google vers Brevo directement",
+    "flow": [
+        {
+            "id": 1,
+            "module": "google-contacts:watchContacts",
+            "version": 4,
+            "parameters": {
+                "limit": 10000,
+                "__IMTCONN__": 5224461
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection (anasgara7@gmail.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "sendinblue:CreateContact",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 5224563
+            },
+            "mapper": {
+                "email": "{{1.emailAddresses[].value}}",
+                "listIds": [
+                    53
+                ],
+                "attributes": {
+                    "NOM": "{{1.familyName}}",
+                    "SMS": "{{1.phoneNumbers[].value}}",
+                    "NOTE": "{{1.note}}",
+                    "PRENOM": "{{1.displayName}}",
+                    "DEUXIEME_PRENOM": "{{1.middleName}}"
+                }
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "listIds": {
+                            "mode": "chose",
+                            "label": [
+                                "client passage"
+                            ]
+                        },
+                        "attributes": {
+                            "nested": {
+                                "OPT_IN": {
+                                    "mode": "chose"
+                                },
+                                "DOUBLE_OPT-IN": {
+                                    "mode": "chose",
+                                    "label": "Empty"
+                                }
+                            }
+                        },
+                        "updateEnabled": {
+                            "mode": "chose"
+                        },
+                        "smsBlacklisted": {
+                            "mode": "chose"
+                        },
+                        "emailBlacklisted": {
+                            "mode": "chose"
+                        },
+                        "smtpBlacklistSender": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "sendinblue2"
+                            },
+                            "label": "My Brevo connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:sendinblue2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "email",
+                        "type": "email",
+                        "label": "Email"
+                    },
+                    {
+                        "name": "attributes",
+                        "spec": [
+                            {
+                                "name": "NOM",
+                                "type": "text"
+                            },
+                            {
+                                "name": "PRENOM",
+                                "type": "text"
+                            },
+                            {
+                                "name": "SMS",
+                                "type": "text"
+                            },
+                            {
+                                "name": "WHATSAPP",
+                                "type": "text"
+                            },
+                            {
+                                "name": "DOUBLE_OPT-IN",
+                                "type": "select",
+                                "validate": {
+                                    "enum": [
+                                        1,
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "DATE_ANNIVERSAIRE",
+                                "type": "text"
+                            },
+                            {
+                                "name": "OPT_IN",
+                                "type": "boolean"
+                            },
+                            {
+                                "name": "LANDLINE_NUMBER",
+                                "type": "text"
+                            },
+                            {
+                                "name": "EXT_ID",
+                                "type": "text"
+                            },
+                            {
+                                "name": "CONTACT_TIMEZONE",
+                                "type": "text"
+                            },
+                            {
+                                "name": "NOTE",
+                                "type": "text"
+                            },
+                            {
+                                "name": "DEUXIEME",
+                                "type": "text"
+                            },
+                            {
+                                "name": "ADRESSE",
+                                "type": "text"
+                            },
+                            {
+                                "name": "SOCIETE",
+                                "type": "text"
+                            },
+                            {
+                                "name": "DEUXIEME_PRENOM",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Attributes"
+                    },
+                    {
+                        "name": "listIds",
+                        "type": "select",
+                        "label": "Lists",
+                        "multiple": true
+                    },
+                    {
+                        "name": "emailBlacklisted",
+                        "type": "boolean",
+                        "label": "Email blacklisted"
+                    },
+                    {
+                        "name": "smsBlacklisted",
+                        "type": "boolean",
+                        "label": "SMS blacklisted"
+                    },
+                    {
+                        "name": "updateEnabled",
+                        "type": "boolean",
+                        "label": "Update enabled"
+                    },
+                    {
+                        "name": "smtpBlacklistSender",
+                        "spec": {
+                            "name": "value",
+                            "type": "text"
+                        },
+                        "type": "array",
+                        "label": "SMTP blacklist sender"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": true,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  laravel_backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: laravel_backend
+    volumes:
+      - ./backend:/var/www
+    working_dir: /var/www
+    ports:
+      - "8000:8000" # Expose Laravel HTTP (artisan) pour communication interne
+    networks:
+      - app-network
+    environment:
+      - COMPOSER_MEMORY_LIMIT=-1
+
+  react_frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: react_frontend
+    ports:
+      - "443:443" # Expose React app en HTTPS
+    volumes:
+      - ./certs/selfsigned.crt:/etc/nginx/certs/cert.pem
+      - ./certs/selfsigned.key:/etc/nginx/certs/key.pem
+      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./certs:/etc/nginx/certs
+    depends_on:
+      - laravel_backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
