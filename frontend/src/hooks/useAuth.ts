@@ -3,7 +3,12 @@ import { useEffect, useState } from "react";
 
 // Crée une instance Axios avec le token JWT
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000/api",
+  // src/lib/api.tsF
+  baseURL: import.meta.env.VITE_API_URL || "/api",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
 });
 
 // Ajoute automatiquement le token dans les headers
